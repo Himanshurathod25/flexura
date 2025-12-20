@@ -72,15 +72,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-background/70 text-sm">
                 <Mail className="w-4 h-4 text-primary" />
-                hello@flexura.com
+                Himanshurathod2515@gmail.com
               </li>
               <li className="flex items-center gap-3 text-background/70 text-sm">
                 <Phone className="w-4 h-4 text-primary" />
-                +1 (555) 123-4567
+                +91 8009613543
               </li>
               <li className="flex items-start gap-3 text-background/70 text-sm">
                 <MapPin className="w-4 h-4 text-primary mt-0.5" />
-                123 Marketing Street<br />New York, NY 10001
+                Delhi, India
               </li>
             </ul>
           </div>

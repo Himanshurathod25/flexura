@@ -15,84 +15,89 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-display font-bold text-xl">F</span>
-            </div>
-            <span className="font-display font-bold text-xl text-foreground">Flexura</span>
-          </Link>
+    <nav className="fixed top-4 left-4 right-4 z-50">
+      <div className="bg-card/95 backdrop-blur-xl border border-border/50 rounded-full shadow-card mx-auto max-w-5xl">
+        <div className="px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo */}
+            <Link to="/" className="flex items-center gap-2 group">
+              <div className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <span className="text-primary-foreground font-display font-bold text-xl">F</span>
+              </div>
+              <span className="font-display font-bold text-xl text-foreground group-hover:text-primary transition-colors duration-300">Flexura</span>
+            </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 group ${
+                    location.pathname === link.path
+                      ? "text-primary bg-primary/10"
+                      : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                  }`}
+                >
+                  {link.name}
+                  <span className={`absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary transition-all duration-300 ${
+                    location.pathname === link.path ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                  }`} />
+                </Link>
+              ))}
+            </div>
+
+            {/* CTA Button */}
+            <div className="hidden md:flex items-center">
+              <Link to="/contact">
+                <Button variant="gradient" className="rounded-full hover:scale-105 transition-transform duration-300">
+                  Get Free Consultation
+                </Button>
+              </Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 rounded-full hover:bg-secondary transition-colors duration-300"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? (
+                <X className="w-6 h-6 text-foreground" />
+              ) : (
+                <Menu className="w-6 h-6 text-foreground" />
+              )}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden mt-2 mx-auto max-w-5xl bg-card/95 backdrop-blur-xl border border-border/50 rounded-3xl shadow-card p-4 animate-scaleIn">
+          <div className="flex flex-col gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-primary ${
+                onClick={() => setIsOpen(false)}
+                className={`text-base font-medium py-3 px-4 rounded-xl transition-all duration-300 ${
                   location.pathname === link.path
-                    ? "text-primary"
-                    : "text-muted-foreground"
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
                 }`}
               >
                 {link.name}
               </Link>
             ))}
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center gap-4">
-            <Link to="/contact">
-              <Button variant="gradient" size="lg">
+            <Link to="/contact" onClick={() => setIsOpen(false)}>
+              <Button variant="gradient" className="w-full mt-2 rounded-full">
                 Get Free Consultation
               </Button>
             </Link>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? (
-              <X className="w-6 h-6 text-foreground" />
-            ) : (
-              <Menu className="w-6 h-6 text-foreground" />
-            )}
-          </button>
         </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-slideUp">
-            <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`text-base font-medium py-2 transition-colors duration-200 ${
-                    location.pathname === link.path
-                      ? "text-primary"
-                      : "text-muted-foreground"
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              ))}
-              <Link to="/contact" onClick={() => setIsOpen(false)}>
-                <Button variant="gradient" className="w-full mt-2">
-                  Get Free Consultation
-                </Button>
-              </Link>
-            </div>
-          </div>
-        )}
-      </div>
+      )}
     </nav>
   );
 };
