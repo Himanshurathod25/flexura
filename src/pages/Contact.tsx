@@ -192,7 +192,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Email Us</h3>
-                        <p className="text-muted-foreground">hello@flexura.com</p>
+                        <p className="text-muted-foreground">Himanshurathod2515@gmail.com</p>
                       </div>
                     </div>
 
@@ -202,7 +202,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Call Us</h3>
-                        <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                        <p className="text-muted-foreground">+91 8009613543</p>
                       </div>
                     </div>
 
@@ -213,8 +213,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Visit Us</h3>
                         <p className="text-muted-foreground">
-                          123 Marketing Street<br />
-                          New York, NY 10001
+                          Delhi, India
                         </p>
                       </div>
                     </div>
