@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -18,17 +18,11 @@ const Footer = () => {
               Smart Digital Marketing That Delivers Results. We help businesses grow with data-driven strategies.
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="text-background/60 hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/in/himanshu-rathod-9349321a5/" target="_blank" rel="noopener noreferrer" className="text-background/60 hover:text-primary transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-background/60 hover:text-primary transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-background/60 hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/himxnshhuuu/" target="_blank" rel="noopener noreferrer" className="text-background/60 hover:text-primary transition-colors">
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-background/60 hover:text-primary transition-colors">
-                <Facebook className="w-5 h-5" />
               </a>
             </div>
           </div>
