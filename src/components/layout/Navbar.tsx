@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -12,63 +12,87 @@ const navLinks = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed top-4 left-4 right-4 z-50">
-      <div className="bg-card/95 backdrop-blur-xl border border-border/50 rounded-full shadow-card mx-auto max-w-5xl">
-        <div className="px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <span className="text-primary-foreground font-display font-bold text-xl">F</span>
-              </div>
-              <span className="font-display font-bold text-xl text-foreground group-hover:text-primary transition-colors duration-300">Flexura</span>
-            </Link>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 group ${
-                    location.pathname === link.path
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-                  }`}
-                >
-                  {link.name}
-                  <span className={`absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary transition-all duration-300 ${
-                    location.pathname === link.path ? "opacity-100" : "opacity-0 group-hover:opacity-100"
-                  }`} />
-                </Link>
-              ))}
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "top-4 left-4 right-4" : ""}`}>
+      <div className={`bg-card/95 backdrop-blur-xl border border-border/50 rounded-full shadow-card mx-auto max-w-5xl transition-all duration-500 ${
+        scrolled 
+          ? "py-2 px-6 lg:px-8 border-primary/30 bg-card/98 shadow-lg" 
+          : "py-4 px-8 lg:px-10"
+      }`}>
+        <div className="flex items-center justify-between h-auto">
+          {/* Logo */}
+          <Link 
+            to="/" 
+            className={`flex items-center gap-2 group transition-all duration-300 ${scrolled ? "scale-90" : "scale-100"}`}
+          >
+            <div className={`bg-gradient-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 ${
+              scrolled ? "w-8 h-8" : "w-10 h-10"
+            }`}>
+              <span className={`text-primary-foreground font-display font-bold transition-all duration-300 ${
+                scrolled ? "text-lg" : "text-xl"
+              }`}>F</span>
             </div>
+            <span className={`font-display font-bold text-foreground group-hover:text-primary transition-all duration-300 ${
+              scrolled ? "text-lg hidden sm:inline" : "text-xl"
+            }`}>Flexura</span>
+          </Link>
 
-            {/* CTA Button */}
-            <div className="hidden md:flex items-center">
-              <Link to="/contact">
-                <Button variant="gradient" className="rounded-full hover:scale-105 transition-transform duration-300">
-                  Get Free Consultation
-                </Button>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 group ${
+                  location.pathname === link.path
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                } ${scrolled ? "text-xs px-3 py-1" : ""}`}
+              >
+                {link.name}
+                <span className={`absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary transition-all duration-300 ${
+                  location.pathname === link.path ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                }`} />
               </Link>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden p-2 rounded-full hover:bg-secondary transition-colors duration-300"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
-            >
-              {isOpen ? (
-                <X className="w-6 h-6 text-foreground" />
-              ) : (
-                <Menu className="w-6 h-6 text-foreground" />
-              )}
-            </button>
+            ))}
           </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center">
+            <a href="https://wa.me/8009613543" target="_blank" rel="noopener noreferrer">
+              <Button 
+                variant="gradient" 
+                className={`rounded-full hover:scale-105 transition-all duration-300 ${scrolled ? "text-sm px-6 py-2" : "px-8 py-3"}`}
+              >
+                Get Free Consultation
+              </Button>
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className={`md:hidden p-2 rounded-full hover:bg-secondary transition-all duration-300 ${scrolled ? "scale-90" : ""}`}
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? (
+              <X className="w-6 h-6 text-foreground" />
+            ) : (
+              <Menu className="w-6 h-6 text-foreground" />
+            )}
+          </button>
         </div>
       </div>
 
@@ -90,11 +114,11 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link to="/contact" onClick={() => setIsOpen(false)}>
+            <a href="https://wa.me/8009613543" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
               <Button variant="gradient" className="w-full mt-2 rounded-full">
                 Get Free Consultation
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       )}

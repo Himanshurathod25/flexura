@@ -28,12 +28,12 @@ const CTASection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/contact">
+              <a href="https://wa.me/8009613543" target="_blank" rel="noopener noreferrer">
                 <Button variant="hero" size="xl">
                   Get Free Consultation
                   <ArrowRight className="w-5 h-5" />
                 </Button>
-              </Link>
+              </a>
               <Link to="/services">
                 <Button variant="heroOutline" size="xl">
                   Learn More
