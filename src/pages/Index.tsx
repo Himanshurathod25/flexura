@@ -1,13 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from "react-helmet-async";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import HeroSection from "@/components/home/HeroSection";
+import ServicesOverview from "@/components/home/ServicesOverview";
+import WhyChooseUs from "@/components/home/WhyChooseUs";
+import CTASection from "@/components/home/CTASection";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Helmet>
+        <title>Flexura | Smart Digital Marketing Agency That Delivers Results</title>
+        <meta 
+          name="description" 
+          content="Transform your online presence with Flexura's data-driven digital marketing. SEO, PPC, social media, and content marketing for startups and businesses." 
+        />
+        <meta name="keywords" content="digital marketing agency, SEO, PPC, social media marketing, content marketing" />
+        <link rel="canonical" href="https://flexura.com" />
+      </Helmet>
+
+      <Navbar />
+      
+      <main>
+        <HeroSection />
+        <ServicesOverview />
+        <WhyChooseUs />
+        <CTASection />
+      </main>
+
+      <Footer />
+    </>
   );
 };
 
