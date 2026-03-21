@@ -25,7 +25,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "top-4 left-4 right-4" : ""}`}>
+    <nav className={`sticky top-0 left-0 right-0 z-[1000] transition-all duration-500 ${scrolled ? "top-4 left-4 right-4" : ""}`}>
       <div className={`bg-card/95 backdrop-blur-xl border border-border/50 rounded-full shadow-card mx-auto max-w-5xl transition-all duration-500 ${
         scrolled 
           ? "py-2 px-6 lg:px-8 border-primary/30 bg-card/98 shadow-lg" 
@@ -71,12 +71,12 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
-            <a href="https://wa.me/8009613543" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/918009613543?text=Hi%20Flexura%2C%20I%20found%20your%20website%20and%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer">
               <Button 
                 variant="gradient" 
                 className={`rounded-full hover:scale-105 transition-all duration-300 ${scrolled ? "text-sm px-6 py-2" : "px-8 py-3"}`}
               >
-                Get Free Consultation
+                Book a Call
               </Button>
             </a>
           </div>
@@ -88,9 +88,9 @@ const Navbar = () => {
             aria-label="Toggle menu"
           >
             {isOpen ? (
-              <X className="w-6 h-6 text-foreground" />
+              <X aria-hidden="true"  className="w-6 h-6 text-foreground" />
             ) : (
-              <Menu className="w-6 h-6 text-foreground" />
+              <Menu aria-hidden="true"  className="w-6 h-6 text-foreground" />
             )}
           </button>
         </div>
@@ -114,9 +114,9 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <a href="https://wa.me/8009613543" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
+            <a href="https://wa.me/918009613543?text=Hi%20Flexura%2C%20I%20found%20your%20website%20and%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
               <Button variant="gradient" className="w-full mt-2 rounded-full">
-                Get Free Consultation
+                Book a Call
               </Button>
             </a>
           </div>

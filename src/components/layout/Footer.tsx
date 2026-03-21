@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Instagram, Twitter, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -18,11 +18,17 @@ const Footer = () => {
               Smart Digital Marketing That Delivers Results. We help businesses grow with data-driven strategies.
             </p>
             <div className="flex items-center gap-4">
-              <a href="https://www.linkedin.com/in/himanshu-rathod-9349321a5/" target="_blank" rel="noopener noreferrer" className="text-background/60 hover:text-primary transition-colors">
-                <Linkedin className="w-5 h-5" />
+              <a href="https://www.instagram.com/flexura" target="_blank" rel="noopener noreferrer" className="text-background/60 hover:text-primary transition-colors">
+                <Instagram aria-label="Instagram" className="w-5 h-5" />
               </a>
-              <a href="https://www.instagram.com/himxnshhuuu/" target="_blank" rel="noopener noreferrer" className="text-background/60 hover:text-primary transition-colors">
-                <Instagram className="w-5 h-5" />
+              <a href="https://www.linkedin.com/company/flexura" target="_blank" rel="noopener noreferrer" className="text-background/60 hover:text-primary transition-colors">
+                <Linkedin aria-label="LinkedIn" className="w-5 h-5" />
+              </a>
+              <a href="https://wa.me/918009613543" target="_blank" rel="noopener noreferrer" className="text-background/60 hover:text-primary transition-colors">
+                <MessageCircle aria-label="WhatsApp" className="w-5 h-5" />
+              </a>
+              <a href="https://twitter.com/flexura" target="_blank" rel="noopener noreferrer" className="text-background/60 hover:text-primary transition-colors">
+                <Twitter aria-label="Twitter/X" className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -65,15 +71,15 @@ const Footer = () => {
             <h4 className="font-display font-semibold text-lg mb-4">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-background/70 text-sm">
-                <Mail className="w-4 h-4 text-primary" />
-                Himanshurathod2515@gmail.com
+                <Mail aria-hidden="true" className="w-4 h-4 text-primary" />
+                <a href="mailto:Himanshurathod2515@gmail.com" className="hover:text-primary transition-colors">Himanshurathod2515@gmail.com</a>
               </li>
               <li className="flex items-center gap-3 text-background/70 text-sm">
-                <Phone className="w-4 h-4 text-primary" />
-                +91 8009613543
+                <Phone aria-hidden="true" className="w-4 h-4 text-primary" />
+                <a href="tel:+918009613543" className="hover:text-primary transition-colors">+91 80096 13543</a>
               </li>
               <li className="flex items-start gap-3 text-background/70 text-sm">
-                <MapPin className="w-4 h-4 text-primary mt-0.5" />
+                <MapPin aria-hidden="true" className="w-4 h-4 text-primary mt-0.5" />
                 Delhi, India
               </li>
             </ul>
@@ -82,7 +88,7 @@ const Footer = () => {
 
         <div className="border-t border-background/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-background/50 text-sm">
-            © {new Date().getFullYear()} Flexura. All rights reserved.
+            © 2024 Flexura Digital. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm">
             <a href="#" className="text-background/50 hover:text-background transition-colors">Privacy Policy</a>

@@ -45,11 +45,11 @@ const RunningServices = () => {
     <section className="py-16 lg:py-24 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5 overflow-hidden">
       <div className="container mx-auto px-4 mb-12">
         <div className="flex items-center gap-3 justify-center mb-8">
-          <Sparkles className="w-6 h-6 text-primary" />
+          <Sparkles aria-hidden="true"  className="w-6 h-6 text-primary" />
           <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">
             Our Core Services
           </h2>
-          <Sparkles className="w-6 h-6 text-primary" />
+          <Sparkles aria-hidden="true"  className="w-6 h-6 text-primary" />
         </div>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto">
           Comprehensive digital marketing solutions running continuously to boost your business growth

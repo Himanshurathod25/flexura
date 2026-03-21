@@ -76,7 +76,7 @@ const RoadmapSection = () => {
                   <div className="space-y-3">
                     {roadmap.details.map((detail, i) => (
                       <div key={i} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 aria-hidden="true"  className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-foreground">{detail}</span>
                       </div>
                     ))}
@@ -87,13 +87,7 @@ const RoadmapSection = () => {
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent rounded-b-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
 
-              {/* Connector Arrow */}
-              {index < roadmapSteps.length - 1 && (
-                <div className="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2">
-                  <div className="w-8 h-0.5 bg-gradient-to-r from-primary to-accent" />
-                  <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 border-t-2 border-r-2 border-primary transform rotate-45" />
-                </div>
-              )}
+
             </div>
           ))}
         </div>
@@ -107,7 +101,7 @@ const RoadmapSection = () => {
             Let's discuss your business goals and create a winning strategy that delivers measurable results.
           </p>
           <a
-            href="https://wa.me/8009613543"
+            href="https://wa.me/918009613543?text=Hi%20Flexura%2C%20I%20found%20your%20website%20and%20would%20like%20to%20know%20more%20about%20your%20services."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-gradient-primary text-white font-semibold px-8 py-4 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"

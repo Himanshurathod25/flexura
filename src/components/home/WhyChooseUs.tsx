@@ -91,7 +91,7 @@ const WhyChooseUs = () => {
               <div className="absolute -top-4 -right-4 bg-card rounded-2xl p-4 shadow-card border border-border/50">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center">
-                    <Zap className="w-5 h-5 text-primary-foreground" />
+                    <Zap aria-hidden="true"  className="w-5 h-5 text-primary-foreground" />
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-foreground">Top Rated</div>

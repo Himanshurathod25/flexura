@@ -65,9 +65,9 @@ const FAQ = () => {
                   {faq.question}
                 </h3>
                 {openId === faq.id ? (
-                  <ChevronUp className="w-5 h-5 text-primary flex-shrink-0 ml-4" />
+                  <ChevronUp aria-hidden="true"  className="w-5 h-5 text-primary flex-shrink-0 ml-4" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0 ml-4" />
+                  <ChevronDown aria-hidden="true"  className="w-5 h-5 text-muted-foreground flex-shrink-0 ml-4" />
                 )}
               </button>
 
@@ -88,7 +88,7 @@ const FAQ = () => {
             Still have questions? Let's talk!
           </p>
           <a
-            href="https://wa.me/8009613543"
+            href="https://wa.me/918009613543?text=Hi%20Flexura%2C%20I%20found%20your%20website%20and%20would%20like%20to%20know%20more%20about%20your%20services."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-gradient-primary text-white font-semibold px-8 py-4 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"

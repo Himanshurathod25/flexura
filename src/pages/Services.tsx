@@ -207,13 +207,13 @@ const Services = () => {
                 Comprehensive solutions designed to accelerate your growth, increase visibility, and maximize ROI across all digital channels.
               </p>
               <a
-                href="https://wa.me/8009613543"
+                href="https://wa.me/918009613543?text=Hi%20Flexura%2C%20I%20found%20your%20website%20and%20would%20like%20to%20know%20more%20about%20your%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white text-primary font-semibold px-8 py-4 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
                 <span>Get Free Consultation</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight aria-hidden="true"  className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -267,7 +267,7 @@ const Services = () => {
                     <div className={`space-y-2 mb-6 transition-all duration-300 ${isHovered ? "opacity-100 max-h-96" : "opacity-0 max-h-0 overflow-hidden"}`}>
                       {service.benefits.slice(0, 3).map((benefit, i) => (
                         <div key={i} className="flex items-center gap-2 text-sm text-foreground">
-                          <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                          <Check aria-hidden="true"  className="w-4 h-4 text-primary flex-shrink-0" />
                           <span>{benefit}</span>
                         </div>
                       ))}
@@ -275,13 +275,13 @@ const Services = () => {
 
                     {/* CTA Link */}
                     <a
-                      href="https://wa.me/8009613543"
+                      href="https://wa.me/918009613543?text=Hi%20Flexura%2C%20I%20found%20your%20website%20and%20would%20like%20to%20know%20more%20about%20your%20services."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors duration-300 group/link"
                     >
                       <span>Learn More</span>
-                      <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" />
+                      <ArrowRight aria-hidden="true"  className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" />
                     </a>
 
                     {/* Bottom Accent */}
@@ -299,28 +299,28 @@ const Services = () => {
                 </h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="flex items-start gap-3">
-                    <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <Check aria-hidden="true"  className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold text-foreground mb-2">Data-Driven Approach</h3>
                       <p className="text-muted-foreground">Every decision backed by data and analytics</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <Check aria-hidden="true"  className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold text-foreground mb-2">Expert Team</h3>
                       <p className="text-muted-foreground">Industry veterans with proven track records</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <Check aria-hidden="true"  className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold text-foreground mb-2">Transparent Reporting</h3>
                       <p className="text-muted-foreground">Clear insights into your campaign performance</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <Check aria-hidden="true"  className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold text-foreground mb-2">Custom Solutions</h3>
                       <p className="text-muted-foreground">Tailored strategies for your unique business</p>
@@ -342,13 +342,13 @@ const Services = () => {
               Let's discuss which services are right for your business goals and create a winning strategy.
             </p>
             <a
-              href="https://wa.me/8009613543"
+              href="https://wa.me/918009613543?text=Hi%20Flexura%2C%20I%20found%20your%20website%20and%20would%20like%20to%20know%20more%20about%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-primary text-white font-semibold px-8 py-4 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               <span>Get Free Consultation</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight aria-hidden="true"  className="w-5 h-5" />
             </a>
           </div>
         </section>

@@ -71,7 +71,7 @@ const About = () => {
               {/* Mission */}
               <div className="bg-card rounded-3xl p-8 lg:p-12 shadow-card border border-border/50">
                 <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-                  <Target className="w-7 h-7 text-primary" />
+                  <Target aria-hidden="true"  className="w-7 h-7 text-primary" />
                 </div>
                 <h2 className="font-display text-2xl font-bold text-foreground mb-4">Our Mission</h2>
                 <p className="text-muted-foreground leading-relaxed">
@@ -82,7 +82,7 @@ const About = () => {
               {/* Vision */}
               <div className="bg-card rounded-3xl p-8 lg:p-12 shadow-card border border-border/50">
                 <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6">
-                  <Eye className="w-7 h-7 text-accent" />
+                  <Eye aria-hidden="true"  className="w-7 h-7 text-accent" />
                 </div>
                 <h2 className="font-display text-2xl font-bold text-foreground mb-4">Our Vision</h2>
                 <p className="text-muted-foreground leading-relaxed">
@@ -170,13 +170,13 @@ const About = () => {
                 <Link to="/contact">
                   <Button variant="gradient" size="lg">
                     Work With Us
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight aria-hidden="true"  className="w-5 h-5" />
                   </Button>
                 </Link>
               </div>
 
               <div className="bg-gradient-primary rounded-3xl p-8 lg:p-12 flex items-center justify-center aspect-square">
-                <Users className="w-32 h-32 text-white/20" />
+                <Users aria-hidden="true"  className="w-32 h-32 text-white/20" />
               </div>
             </div>
           </div>
@@ -194,7 +194,7 @@ const About = () => {
             <Link to="/contact">
               <Button variant="gradient" size="xl">
                 Get Started Today
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight aria-hidden="true"  className="w-5 h-5" />
               </Button>
             </Link>
           </div>

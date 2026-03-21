@@ -7,7 +7,7 @@ const NavHeroBanner: React.FC = () => {
     <div className="hidden lg:flex items-center justify-between mt-3 px-3">
       <div className="inline-flex items-center bg-orange-50 text-orange-600 px-3 py-1.5 rounded-full text-xs font-medium border border-orange-200">
         <div className="flex items-center mr-2">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 mr-1">
+          <svg aria-hidden="true"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 mr-1">
             <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.402 8.172L12 18.896l-7.336 3.873 1.402-8.172L.132 9.21l8.2-1.192z" />
           </svg>
           <span className="text-sm font-semibold">4.5/5</span>

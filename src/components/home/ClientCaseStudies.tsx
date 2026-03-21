@@ -124,7 +124,7 @@ const ClientCaseStudies = () => {
                 {/* Rating Stars */}
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star
+                    <Star aria-hidden="true" 
                       key={i}
                       className="w-4 h-4 fill-yellow-400 text-yellow-400"
                     />
@@ -170,7 +170,7 @@ const ClientCaseStudies = () => {
               {/* CTA Link */}
               <div className="mt-8 pt-8 border-t border-border/50">
                 <a
-                  href="https://wa.me/8009613543"
+                  href="https://wa.me/918009613543?text=Hi%20Flexura%2C%20I%20found%20your%20website%20and%20would%20like%20to%20know%20more%20about%20your%20services."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors duration-300"
@@ -192,7 +192,7 @@ const ClientCaseStudies = () => {
             Let's discuss your business goals and create a winning strategy tailored just for you.
           </p>
           <a
-            href="https://wa.me/8009613543"
+            href="https://wa.me/918009613543?text=Hi%20Flexura%2C%20I%20found%20your%20website%20and%20would%20like%20to%20know%20more%20about%20your%20services."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-gradient-primary text-white font-semibold px-8 py-4 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"

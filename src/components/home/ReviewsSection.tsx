@@ -143,21 +143,21 @@ const ReviewsSection = () => {
       label: "Active Clients",
       value: "250",
       suffix: "+",
-      icon: <Users className="w-6 h-6" />,
+      icon: <Users aria-hidden="true"  className="w-6 h-6" />,
       color: "from-blue-500 to-purple-600",
     },
     {
       label: "Client Satisfaction",
       value: "98",
       suffix: "%",
-      icon: <Award className="w-6 h-6" />,
+      icon: <Award aria-hidden="true"  className="w-6 h-6" />,
       color: "from-purple-500 to-pink-600",
     },
     {
       label: "Average Rating",
       value: "4.9",
       suffix: "/5",
-      icon: <TrendingUp className="w-6 h-6" />,
+      icon: <TrendingUp aria-hidden="true"  className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-600",
     },
   ];
@@ -205,7 +205,7 @@ const ReviewsSection = () => {
                 {/* Stars */}
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: review.rating }).map((_, i) => (
-                    <Star
+                    <Star aria-hidden="true" 
                       key={i}
                       size={16}
                       className="fill-primary text-primary"
@@ -222,7 +222,10 @@ const ReviewsSection = () => {
                 <div className="flex items-center gap-3">
                   <img
                     src={review.avatar}
-                    alt={review.name}
+                    alt={`${review.name} - ${review.title} avatar`}
+                    loading="lazy"
+                    width="48"
+                    height="48"
                     className="w-12 h-12 rounded-full object-cover border border-primary/20"
                   />
                   <div>

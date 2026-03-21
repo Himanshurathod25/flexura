@@ -74,13 +74,13 @@ const BenefitsSection = () => {
                   </td>
                   <td className="py-6 px-4 text-center text-muted-foreground">
                     <div className="flex items-center justify-center gap-2">
-                      <X className="w-5 h-5 text-red-500" />
+                      <X aria-hidden="true"  className="w-5 h-5 text-red-500" />
                       <span>{benefit.traditional}</span>
                     </div>
                   </td>
                   <td className="py-6 px-4 text-center text-foreground font-semibold">
                     <div className="flex items-center justify-center gap-2">
-                      <Check className="w-5 h-5 text-green-500" />
+                      <Check aria-hidden="true"  className="w-5 h-5 text-green-500" />
                       <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                         {benefit.flexura}
                       </span>
@@ -98,7 +98,7 @@ const BenefitsSection = () => {
             Experience the Flexura difference with our data-driven approach and proven results
           </p>
           <a
-            href="https://wa.me/8009613543"
+            href="https://wa.me/918009613543?text=Hi%20Flexura%2C%20I%20found%20your%20website%20and%20would%20like%20to%20know%20more%20about%20your%20services."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-gradient-primary text-white font-semibold px-8 py-4 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"

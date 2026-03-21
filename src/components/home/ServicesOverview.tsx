@@ -87,7 +87,7 @@ const ServicesOverview = () => {
 
               {/* Arrow */}
               <div className="flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                Learn More <ArrowRight aria-hidden="true"  className="w-4 h-4 ml-1" />
               </div>
             </div>
           ))}
@@ -98,7 +98,7 @@ const ServicesOverview = () => {
           <Link to="/services">
             <Button variant="gradient" size="lg">
               View All Services
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight aria-hidden="true"  className="w-5 h-5" />
             </Button>
           </Link>
         </div>
