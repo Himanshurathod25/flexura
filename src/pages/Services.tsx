@@ -190,7 +190,7 @@ const Services = () => {
           name="description" 
           content="Comprehensive digital marketing services including SEO, PPC, social media marketing, content marketing, and more. Grow your business with Flexura." 
         />
-        <link rel="canonical" href="https://flexura.com/services" />
+        <link rel="canonical" href="https://flexura.in/services" />
       </Helmet>
 
       <Navbar />

@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
-Disallow: /private/
 
-Sitemap: https://flexura.netlify.app/sitemap.xml
+Sitemap: https://flexura.in/sitemap.xml

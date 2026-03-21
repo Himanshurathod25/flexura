@@ -1,23 +1,31 @@
-# Build settings
+# Build configuration
 [build]
   command = "npm run build"
   publish = "dist"
 
-# Serve robots.txt as a real file — must come BEFORE the SPA catch-all
+# 301 redirect — netlify.app to custom domain (prevents duplicate Google indexing)
+# This MUST come FIRST before all other redirects
+[[redirects]]
+  from = "https://flexura.netlify.app/*"
+  to = "https://flexura.in/:splat"
+  status = 301
+  force = true
+
+# Serve robots.txt as real file — prevents SPA catch-all from blocking it
 [[redirects]]
   from = "/robots.txt"
   to = "/robots.txt"
   status = 200
   force = true
 
-# Serve sitemap.xml as a real file — must come BEFORE the SPA catch-all
+# Serve sitemap.xml as real file — prevents SPA catch-all from blocking it
 [[redirects]]
   from = "/sitemap.xml"
   to = "/sitemap.xml"
   status = 200
   force = true
 
-# SPA catch-all — MUST be the LAST redirect rule
+# SPA catch-all — THIS MUST ALWAYS BE THE VERY LAST RULE
 [[redirects]]
   from = "/*"
   to = "/index.html"

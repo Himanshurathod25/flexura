@@ -44,7 +44,7 @@ const About = () => {
           name="description" 
           content="Learn about Flexura's mission, vision, and the expert team behind our digital marketing success. Trusted by 500+ businesses worldwide." 
         />
-        <link rel="canonical" href="https://flexura.com/about" />
+        <link rel="canonical" href="https://flexura.in/about" />
       </Helmet>
 
       <Navbar />

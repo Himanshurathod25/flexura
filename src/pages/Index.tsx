@@ -18,13 +18,13 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Flexura | Smart Digital Marketing Agency That Delivers Results</title>
+        <title>Flexura | SEO, Google Ads &amp; Web Development Agency — Worldwide</title>
         <meta 
           name="description" 
-          content="Transform your online presence with Flexura's data-driven digital marketing. SEO, PPC, social media, and content marketing for startups and businesses." 
+          content="Flexura helps businesses worldwide grow online with SEO, Google Ads, website development and performance marketing. From Delhi to Dubai — we deliver real results. Get a free strategy call today." 
         />
-        <meta name="keywords" content="digital marketing agency, SEO, PPC, social media marketing, content marketing" />
-        <link rel="canonical" href="https://flexura.com" />
+        <meta name="keywords" content="SEO agency, Google Ads agency, PPC, web development, digital marketing, performance marketing, lead generation" />
+        <link rel="canonical" href="https://flexura.in" />
       </Helmet>
 
       <Navbar />

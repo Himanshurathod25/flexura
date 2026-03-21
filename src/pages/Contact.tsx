@@ -12,7 +12,7 @@ const Contact = () => {
           name="description" 
           content="Contact Flexura for a free digital marketing consultation. Reach out via WhatsApp to discuss your SEO, PPC, and content marketing needs." 
         />
-        <link rel="canonical" href="https://flexura.com/contact" />
+        <link rel="canonical" href="https://flexura.in/contact" />
       </Helmet>
 
       <Navbar />
@@ -109,13 +109,13 @@ const Contact = () => {
                       </div>
                     </a>
 
-                    <a href="mailto:hello@flexura.com" className="flex items-center gap-4 group">
+                    <a href="mailto:hello@flexura.in" className="flex items-center gap-4 group">
                       <div className="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
                         <Mail aria-hidden="true" className="w-6 h-6 text-blue-500" />
                       </div>
                       <div>
                         <p className="font-medium text-foreground">Email Us</p>
-                        <p className="text-sm text-muted-foreground">hello@flexura.com</p>
+                        <p className="text-sm text-muted-foreground">hello@flexura.in</p>
                       </div>
                     </a>
 
