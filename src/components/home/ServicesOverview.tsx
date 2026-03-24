@@ -51,7 +51,7 @@ const services = [
 
 const ServicesOverview = () => {
   return (
-    <section className="py-20 lg:py-32 bg-background">
+    <section className="py-20 lg:py-32 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -65,7 +65,7 @@ const ServicesOverview = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 lg:gap-8">
           {services.map((service, index) => (
             <div
               key={service.title}

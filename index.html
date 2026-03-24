@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Hide raw SEO fallback HTML until React mounts (prevents FOUC) -->
+    <style>
+      .seo-fallback {
+        display: none !important;
+      }
+    </style>
+
     <!-- Primary SEO — hardcoded in HTML not JavaScript -->
     <title>Flexura | SEO, Google Ads &amp; Web Development Agency — Worldwide</title>
     <meta name="description" content="Flexura helps businesses worldwide grow online with SEO, Google Ads, website development and performance marketing. From Delhi to Dubai — we deliver real results. Get a free strategy call today." />
@@ -92,12 +99,12 @@
   <body>
     <!-- Static Fallback Content for SEO Crawlers (React will replace this on load) -->
     <div id="root">
-      <header>
+      <header class="seo-fallback">
         <h1>Flexura | SEO, Google Ads &amp; Web Development Agency — Worldwide</h1>
         <p>We Build, Rank &amp; Grow Businesses Worldwide. From high-converting websites to Google Ads, SEO &amp; full-funnel digital marketing — Flexura is your one-stop growth partner, wherever you are in the world.</p>
         <a href="https://wa.me/918009613543?text=Hi%20Flexura%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services.">Get a Free Strategy Call</a>
       </header>
-      <main>
+      <main class="seo-fallback">
         <section>
           <h2>Our Services</h2>
           <ul>
@@ -128,7 +135,7 @@
           </ul>
         </section>
       </main>
-      <footer>
+      <footer class="seo-fallback">
         <p>Contact us: hello@flexura.in | +91 80096 13543 | Delhi, India | flexura.in</p>
       </footer>
     </div>

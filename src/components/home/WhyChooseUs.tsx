@@ -59,27 +59,27 @@ const WhyChooseUs = () => {
 
           {/* Right Content - Stats Card */}
           <div className="relative">
-            <div className="bg-gradient-hero rounded-3xl p-8 lg:p-12">
-              <div className="grid grid-cols-2 gap-8">
-                <div className="text-center">
+            <div className="bg-gradient-hero rounded-3xl p-6 sm:p-8 lg:p-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
+                <div className="text-center p-2">
                   <div className="font-display text-4xl lg:text-5xl font-bold text-primary-foreground mb-2">
                     98%
                   </div>
                   <p className="text-primary-foreground/70 text-sm">Client Retention Rate</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center p-2">
                   <div className="font-display text-4xl lg:text-5xl font-bold text-primary-foreground mb-2">
                     50+
                   </div>
                   <p className="text-primary-foreground/70 text-sm">Expert Team Members</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center p-2">
                   <div className="font-display text-4xl lg:text-5xl font-bold text-primary-foreground mb-2">
                     8+
                   </div>
                   <p className="text-primary-foreground/70 text-sm">Years of Excellence</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center p-2">
                   <div className="font-display text-4xl lg:text-5xl font-bold text-primary-foreground mb-2">
                     24/7
                   </div>
@@ -88,7 +88,7 @@ const WhyChooseUs = () => {
               </div>
 
               {/* Floating Badge */}
-              <div className="absolute -top-4 -right-4 bg-card rounded-2xl p-4 shadow-card border border-border/50">
+              <div className="absolute -top-4 right-0 sm:-right-4 bg-card rounded-2xl p-4 shadow-card border border-border/50">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center">
                     <Zap aria-hidden="true"  className="w-5 h-5 text-primary-foreground" />

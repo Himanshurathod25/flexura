@@ -4,18 +4,18 @@ import { ArrowRight, Sparkles, TrendingUp, Users } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
+    <section className="relative min-h-[calc(100vh-var(--nav-h))] bg-gradient-hero overflow-hidden" style={{ zIndex: "var(--z-base)" }}>
       {/* Background Effects */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-slow" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "2s" }} />
       </div>
 
       {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <div className="absolute inset-0 z-0 pointer-events-none bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
-      <div className="container relative mx-auto px-4 pt-32 pb-20 lg:pt-40 lg:pb-32">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="container relative z-10 mx-auto px-4 pt-[calc(var(--nav-h)+2rem)] pb-20 lg:pt-[calc(var(--nav-h)+5rem)] lg:pb-32 flex flex-col justify-center">
+        <div className="max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-8 animate-fadeIn">
             <div className="flex text-amber-500 text-sm">
@@ -40,17 +40,17 @@ const HeroSection = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8 animate-slideUp" style={{ animationDelay: "0.2s" }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8 animate-slideUp w-full px-4" style={{ animationDelay: "0.2s" }}>
             <a
               href="https://wa.me/918009613543?text=Hi%20Flexura%2C%20I%20found%20your%20website%20and%20would%20like%20to%20know%20more%20about%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary/90 transition-colors flex items-center justify-center shadow-lg shadow-primary/25"
+              className="w-full sm:w-auto bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary/90 transition-colors flex items-center justify-center shadow-lg shadow-primary/25"
               style={{ padding: "14px 32px", fontSize: "16px" }}
             >
               Get a Free Strategy Call
             </a>
-            <a href="#case-studies" className="text-primary-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+            <a href="#case-studies" className="w-full sm:w-auto justify-center text-primary-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 py-2">
               See Our Work <ArrowRight aria-hidden="true" className="w-5 h-5" />
             </a>
           </div>
@@ -65,33 +65,33 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 max-w-4xl mx-auto animate-slideUp" style={{ animationDelay: "0.3s" }}>
-            <div className="text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 max-w-4xl mx-auto animate-slideUp" style={{ animationDelay: "0.3s" }}>
+            <div className="text-center p-2">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <TrendingUp aria-hidden="true"  className="w-5 h-5 text-primary" />
-                <span className="font-display text-3xl font-bold text-primary-foreground">300%</span>
+                <span className="font-display text-2xl sm:text-3xl font-bold text-primary-foreground">300%</span>
               </div>
-              <p className="text-sm text-primary-foreground/60">Average ROI Increase</p>
+              <p className="text-xs sm:text-sm text-primary-foreground/60">Average ROI Increase</p>
             </div>
-            <div className="text-center">
+            <div className="text-center p-2">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Users aria-hidden="true"  className="w-5 h-5 text-primary" />
-                <span className="font-display text-3xl font-bold text-primary-foreground">500+</span>
+                <span className="font-display text-2xl sm:text-3xl font-bold text-primary-foreground">500+</span>
               </div>
-              <p className="text-sm text-primary-foreground/60">Happy Clients</p>
+              <p className="text-xs sm:text-sm text-primary-foreground/60">Happy Clients</p>
             </div>
-            <div className="text-center">
+            <div className="text-center p-2">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Sparkles aria-hidden="true"  className="w-5 h-5 text-primary" />
-                <span className="font-display text-3xl font-bold text-primary-foreground">10M+</span>
+                <span className="font-display text-2xl sm:text-3xl font-bold text-primary-foreground">10M+</span>
               </div>
-              <p className="text-sm text-primary-foreground/60">Leads Generated</p>
+              <p className="text-xs sm:text-sm text-primary-foreground/60">Leads Generated</p>
             </div>
-            <div className="text-center">
+            <div className="text-center p-2">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <span className="font-display text-3xl font-bold text-primary-foreground">5+</span>
+                <span className="font-display text-2xl sm:text-3xl font-bold text-primary-foreground">5+</span>
               </div>
-              <p className="text-sm text-primary-foreground/60">Years Experience</p>
+              <p className="text-xs sm:text-sm text-primary-foreground/60">Years Experience</p>
             </div>
           </div>
         </div>

@@ -8,15 +8,18 @@ const CTASection = () => {
       <div className="container mx-auto px-4">
         <div className="relative bg-gradient-hero rounded-3xl overflow-hidden">
           {/* Background Effects */}
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/20 rounded-full blur-3xl" />
           </div>
 
+          {/* Overlay for contrast */}
+          <div className="absolute inset-0 z-[1] bg-black/5" />
+
           {/* Content */}
-          <div className="relative px-8 py-16 lg:px-16 lg:py-24 text-center">
+          <div className="relative z-[2] px-8 py-16 lg:px-16 lg:py-24 text-center">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/20 rounded-2xl mb-8">
-              <Rocket aria-hidden="true"  className="w-8 h-8 text-primary" />
+              <Rocket aria-hidden="true"  className="w-8 h-8 text-primary relative z-10" />
             </div>
 
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground max-w-3xl mx-auto mb-6">

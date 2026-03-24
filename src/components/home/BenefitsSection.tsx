@@ -49,7 +49,7 @@ const BenefitsSection = () => {
 
         {/* Comparison Table */}
         <div className="overflow-x-auto">
-          <table className="w-full">
+          <table className="w-full min-w-[600px]">
             <thead>
               <tr className="border-b-2 border-border/50">
                 <th className="text-left py-6 px-4 font-display font-bold text-foreground">

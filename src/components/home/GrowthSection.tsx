@@ -41,7 +41,7 @@ const solutions = [
 
 const GrowthSection = () => {
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-b from-secondary/30 to-background">
+    <section className="py-20 lg:py-32 bg-gradient-to-b from-secondary/30 to-background relative overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-20">
@@ -54,7 +54,7 @@ const GrowthSection = () => {
         </div>
 
         {/* Solutions Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 mb-16">
           {solutions.map((solution, index) => {
             const Icon = solution.icon;
             return (
