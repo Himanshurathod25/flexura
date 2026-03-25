@@ -1,5 +1,10 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
 
 Sitemap: https://flexura.in/sitemap.xml

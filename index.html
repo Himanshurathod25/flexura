@@ -4,22 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Hide raw SEO fallback HTML until React mounts (prevents FOUC) -->
+    <!-- Visually hide SEO fallback until React mounts — still crawlable by Googlebot -->
     <style>
       .seo-fallback {
-        display: none !important;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        white-space: nowrap;
+        border: 0;
       }
     </style>
 
     <!-- Primary SEO — hardcoded in HTML not JavaScript -->
     <title>Flexura | SEO, Google Ads &amp; Web Development Agency — Worldwide</title>
     <meta name="description" content="Flexura helps businesses worldwide grow online with SEO, Google Ads, website development and performance marketing. From Delhi to Dubai — we deliver real results. Get a free strategy call today." />
-    <meta name="keywords" content="SEO agency, Google Ads agency, PPC agency, web development agency, digital marketing agency, performance marketing, lead generation, branding, flexura" />
+    <meta name="keywords" content="SEO agency, Google Ads agency, PPC agency, web development agency, digital marketing agency, performance marketing, lead generation, branding, flexura, flexura.in, web developer noida, digital marketing delhi ncr" />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Flexura Digital" />
     <link rel="canonical" href="https://flexura.in/" />
 
-    <!-- Open Graph — controls WhatsApp, LinkedIn, Facebook link previews -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Flexura | We Build, Rank &amp; Grow Businesses Worldwide" />
     <meta property="og:description" content="SEO, Google Ads, website development &amp; performance marketing — Flexura is your one-stop digital growth partner, wherever you are in the world." />
@@ -42,45 +50,44 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- JSON-LD Structured Data for Google rich results -->
+    <!-- JSON-LD LocalBusiness Schema — signals Google for local search ranking -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Flexura Digital",
+      "@type": "LocalBusiness",
+      "name": "Flexura",
       "url": "https://flexura.in",
       "logo": "https://flexura.in/logo.png",
-      "description": "Flexura is a digital growth agency helping businesses worldwide with SEO, Google Ads, website development and performance marketing.",
-      "serviceType": [
-        "Search Engine Optimization",
-        "Search Engine Marketing",
-        "Google Ads",
-        "PPC Advertising",
-        "Website Development",
-        "Landing Page Development",
-        "Performance Marketing",
-        "Lead Generation",
-        "Branding",
-        "Digital Marketing"
+      "image": "https://flexura.in/og-image.jpg",
+      "description": "Web Development, SEO, Google Ads, Automation, Video Editing & Lead Generation Agency in Noida, Delhi, Ghaziabad & NCR.",
+      "telephone": "+918009613543",
+      "email": "hello@flexura.in",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Delhi",
+        "addressRegion": "Delhi NCR",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "28.6139",
+        "longitude": "77.2090"
+      },
+      "areaServed": [
+        "Worldwide",
+        "Noida", "Delhi", "Ghaziabad", "Greater Noida",
+        "Faridabad", "Gurugram", "NCR",
+        "Dubai", "USA", "UK", "Australia", "Canada"
       ],
-      "areaServed": "Worldwide",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Digital Marketing Services",
-        "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SEO — Search Engine Optimization"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SEM — Google Ads & PPC"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Website Development"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Performance Marketing & Lead Generation"}}
-        ]
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "availableLanguage": ["English", "Hindi"]
-      },
+      "serviceType": [
+        "Web Development", "SEO", "Google Ads",
+        "Automation", "Video Editing", "Lead Generation",
+        "Social Media Marketing", "Performance Marketing"
+      ],
+      "priceRange": "\u20b9\u20b9",
+      "openingHours": "Mo-Sa 09:00-19:00",
       "sameAs": [
-        "https://www.instagram.com/flexura",
+        "https://www.instagram.com/flexura.in",
         "https://www.linkedin.com/company/flexura"
       ]
     }

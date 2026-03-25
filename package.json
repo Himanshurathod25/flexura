@@ -6,9 +6,24 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "react-snap",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
+  },
+  "reactSnap": {
+    "source": "dist",
+    "minifyHtml": false,
+    "crawlSameOrigin": true,
+    "skipThirdPartyRequests": true,
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "routes": [
+      "/", "/services", "/about", "/contact",
+      "/web-developer-noida", "/web-developer-delhi", "/web-developer-ghaziabad",
+      "/digital-marketing-noida", "/digital-marketing-delhi",
+      "/seo-agency-noida", "/lead-generation-noida",
+      "/automation-agency-delhi-ncr", "/video-editing-noida", "/google-ads-delhi-ncr"
+    ]
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

@@ -1,27 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core Pages -->
   <url>
     <loc>https://flexura.in/</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://flexura.in/services</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://flexura.in/about</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://flexura.in/contact</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+
+  <!-- Location Pages — Noida -->
+  <url>
+    <loc>https://flexura.in/web-developer-noida</loc>
+    <lastmod>2025-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://flexura.in/digital-marketing-noida</loc>
+    <lastmod>2025-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://flexura.in/seo-agency-noida</loc>
+    <lastmod>2025-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://flexura.in/lead-generation-noida</loc>
+    <lastmod>2025-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://flexura.in/video-editing-noida</loc>
+    <lastmod>2025-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Location Pages — Delhi -->
+  <url>
+    <loc>https://flexura.in/web-developer-delhi</loc>
+    <lastmod>2025-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://flexura.in/digital-marketing-delhi</loc>
+    <lastmod>2025-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://flexura.in/google-ads-delhi-ncr</loc>
+    <lastmod>2025-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://flexura.in/automation-agency-delhi-ncr</loc>
+    <lastmod>2025-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Location Pages — Ghaziabad -->
+  <url>
+    <loc>https://flexura.in/web-developer-ghaziabad</loc>
+    <lastmod>2025-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
 </urlset>
